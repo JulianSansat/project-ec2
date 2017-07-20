@@ -1,44 +1,59 @@
-<h2>Your Invoices</h2>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<h2>Resultados</h2>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <td>Number</td>
-            <td>Customer</td>
-            <td>Date</td>
-            <td>Total</td>
-            <td>Status</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>51001</td>
-            <td>Friðrik Þór Friðriksson</td>
-            <td>2014-04-02</td>
-            <td align="right">12.50</td>
-            <td><span class="label label-success">Success</span></td>
-        </tr>
-        <tr>
-            <td>51002</td>
-            <td>Keith Carradine</td>
-            <td>2014-04-04</td>
-            <td align="right">22.75</td>
-            <td><span class="label label-danger">Rejected</span></td>
-        </tr>
-        <tr>
-            <td>51003</td>
-            <td>Nico Engelbrecht</td>
-            <td>2014-04-04</td>
-            <td align="right">6.50</td>
-            <td><span class="label label-success">Success</span></td>
-        </tr>
-        <tr>
-            <td>51004</td>
-            <td>Clinton Kayser</td>
-            <td>2014-04-07</td>
-            <td align="right">11.50</td>
-            <td><span class="label label-success">Success</span></td>
-        </tr>
-    </tbody>
-</table>
+{% for i, grafico in graficos %}
+    <div id="container{{i}}" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+{% endfor %}
+
+
+
+{{ assets.outputJs() }}
+<script>
+$(document).ready(function () {
+var graficosjs = {{graficosjs}};
+for (var key in graficosjs){  
+    Highcharts.chart('container'+key, {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: graficosjs[key]['titulo']
+    },
+    xAxis: {
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Respostas',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' respostas'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false
+            }
+        }
+    },
+    legend: {
+         enabled: false
+    },
+    credits: {
+        enabled: false
+    },
+    series: graficosjs[key]['series']
+});
+}
+});
+</script>
 

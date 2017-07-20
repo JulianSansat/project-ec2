@@ -1,23 +1,25 @@
 <?php
-
+use Phalcon\Mvc\Controller;
 /**
  * SessionController
  *
  * Allows to authenticate users
  */
-class SessionController extends ControllerBase
+class SessionController extends Controller
 {
     public function initialize()
     {
+        $this->view->setTemplateAfter('main');
         $this->tag->setTitle('Sign Up/Sign In');
-        parent::initialize();
+        $this->assets->addJs('public/js/jquery.min.js');
     }
 
     public function indexAction()
     {
         if (!$this->request->isPost()) {
-            $this->tag->setDefault('email', 'demo@phalconphp.com');
-            $this->tag->setDefault('password', 'phalcon');
+            if($this->session->get('auth')){
+                $this->session->remove('auth');
+            }
         }
     }
 
@@ -30,7 +32,8 @@ class SessionController extends ControllerBase
     {
         $this->session->set('auth', array(
             'id' => $user->id,
-            'name' => $user->name
+            'name' => $user->name,
+            'role' => 'Users'
         ));
     }
 

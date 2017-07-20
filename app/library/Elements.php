@@ -17,15 +17,7 @@ class Elements extends Component
                 'action' => 'index'
             ),
             'invoices' => array(
-                'caption' => 'Invoices',
-                'action' => 'index'
-            ),
-            'about' => array(
-                'caption' => 'About',
-                'action' => 'index'
-            ),
-            'contact' => array(
-                'caption' => 'Contact',
+                'caption' => 'Resultados',
                 'action' => 'index'
             ),
         ),
@@ -38,27 +30,12 @@ class Elements extends Component
     );
 
     private $_tabs = array(
-        'Invoices' => array(
+        'Resultados' => array(
             'controller' => 'invoices',
             'action' => 'index',
             'any' => false
         ),
-        'Companies' => array(
-            'controller' => 'companies',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Products' => array(
-            'controller' => 'products',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Product Types' => array(
-            'controller' => 'producttypes',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Your Profile' => array(
+        'Tabelas' => array(
             'controller' => 'invoices',
             'action' => 'profile',
             'any' => false

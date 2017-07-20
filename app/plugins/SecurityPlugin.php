@@ -36,7 +36,11 @@ class SecurityPlugin extends Plugin
 				),
 				'guests' => new Role(
 					'Guests',
-					'Anyone browsing the site who is not signed in is considered to be a "Guest".'
+					'logged guests to be a "Guest".'
+				),
+				'visitors' => new Role(
+					'Visitors',
+					'Anyone browsing the site who is not signed in is considered to be a "Visitor".'
 				)
 			];
 
@@ -46,9 +50,6 @@ class SecurityPlugin extends Plugin
 
 			//Private area resources
 			$privateResources = array(
-				'companies'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-				'products'     => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-				'producttypes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'invoices'     => array('index', 'profile')
 			);
 			foreach ($privateResources as $resource => $actions) {
@@ -62,13 +63,25 @@ class SecurityPlugin extends Plugin
 				'register'   => array('index'),
 				'errors'     => array('show401', 'show404', 'show500'),
 				'session'    => array('index', 'register', 'start', 'end'),
-				'contact'    => array('index', 'send')
+				'contact'    => array('index', 'send'),
+				'test' 		 => array('index'),
+				'guests'	 => array('index', 'terms'),
+				'outro'		 => array('index')	
 			);
 			foreach ($publicResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);
 			}
 
-			//Grant access to public areas to both users and guests
+			//Guests area resources
+			$guestsResources = array(
+				'guests'     => array('begin_forms','terms', 'eoa_first', 'eoa_second', 'eoaSendSecond', 'eoa_third', 'eoaSendThird',
+				'banerjee', 'banerjeeSend','banerjee_second', 'banerjeeSendSecond','banerjee_third', 'banerjeeSendThird','pi', 'piSend','pi_second', 'piSendSecond','pi_third', 'piSendThird')
+			);
+			foreach ($guestsResources as $resource => $actions) {
+				$acl->addResource(new Resource($resource), $actions);
+			}
+
+			//Grant access to public areas to all roles
 			foreach ($roles as $role) {
 				foreach ($publicResources as $resource => $actions) {
 					foreach ($actions as $action){
@@ -81,6 +94,13 @@ class SecurityPlugin extends Plugin
 			foreach ($privateResources as $resource => $actions) {
 				foreach ($actions as $action){
 					$acl->allow('Users', $resource, $action);
+				}
+			}
+
+			//Grant access to guests area to role guests
+			foreach ($guestsResources as $resource => $actions) {
+				foreach ($actions as $action){
+					$acl->allow('Guests', $resource, $action);
 				}
 			}
 
@@ -103,9 +123,9 @@ class SecurityPlugin extends Plugin
 
 		$auth = $this->session->get('auth');
 		if (!$auth){
-			$role = 'Guests';
+			$role = 'Visitors';
 		} else {
-			$role = 'Users';
+			$role = $auth['role'];
 		}
 
 		$controller = $dispatcher->getControllerName();

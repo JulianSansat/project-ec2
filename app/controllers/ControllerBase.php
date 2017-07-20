@@ -8,6 +8,7 @@ class ControllerBase extends Controller
     protected function initialize()
     {
         $this->tag->prependTitle('INVO | ');
-        $this->view->setTemplateAfter('main');
+        $this->view->setTemplateAfter('container');
+        $this->assets->addJs('public/js/jquery.min.js');
     }
 }

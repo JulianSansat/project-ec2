@@ -28,7 +28,7 @@ class Services extends \Base\Services
         /**
          * Handle exceptions and not-found exceptions using NotFoundPlugin
          */
-        $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+        #$eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
 
         $dispatcher = new Dispatcher;
         $dispatcher->setEventsManager($eventsManager);
@@ -58,7 +58,7 @@ class Services extends \Base\Services
 
         return $view;
     }
-
+    
     /**
      * Setting up volt
      */
@@ -67,7 +67,9 @@ class Services extends \Base\Services
         $volt = new VoltEngine($view, $di);
 
         $volt->setOptions(array(
-            "compiledPath" => APP_PATH . "cache/volt/"
+            "compiledPath" => APP_PATH . "cache/volt/",
+            'stat' => true,
+            'compileAlways' => true  
         ));
 
         $compiler = $volt->getCompiler();

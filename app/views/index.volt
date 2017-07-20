@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         {{ get_title() }}
         {{ stylesheet_link('css/bootstrap.min.css') }}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
