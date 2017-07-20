@@ -98,17 +98,17 @@
             <td>q31</td>
             <td>q32</td>
 
-            <td>pi.q1</td>
-            <td>pi.q2</td>
-            <td>pi.q3</td>
-            <td>pi.q4</td>
-            <td>pi.q5</td>
-            <td>pi.q6</td>
-            <td>pi.q7</td>
-            <td>pi.q8</td>
-            <td>pi.q9</td>
-            <td>pi.q10</td>
-            <td>pi.q10_1</td>
+            <td>q1</td>
+            <td>q2</td>
+            <td>q3</td>
+            <td>q4</td>
+            <td>q5</td>
+            <td>q6</td>
+            <td>q7</td>
+            <td>q8</td>
+            <td>q9</td>
+            <td>q10</td>
+            <td>q10_1</td>
 
             <td>q11</td>
             <td>q12</td>
