@@ -174,7 +174,7 @@
                     <h4>32. Prezado Participante, caso seja de vosso interesse, por gentileza, utilize este espaço para manifestar sua contribuição para o aperfeiçoamento do questionário ou para o aperfeiçoamento no combate à tuberculose.</h4>
                         
                     <div class="controls">
-                        {{ form.render('q32') }}
+                        {{ form.render('q32', ['class': 'form-control']) }}
                     </div>
 
                 </div>

@@ -59,6 +59,8 @@ class BanerjeeThird extends \Phalcon\Mvc\Model
      * @var string
      * @Column(type="string", length=255, nullable=true)
      */
+    public $q26_1;
+    
     public $q27;
 
     /**

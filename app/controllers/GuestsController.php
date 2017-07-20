@@ -31,7 +31,7 @@ class GuestsController extends ControllerBase
             $guest->email = $email;
             $guest->escolarship = $escolarship;
             $guest->age = $age;
-            $guest->study_area = $study_area;
+            $guest->study_area = $study_area; 
 
             $guest->created_at = new Phalcon\Db\RawValue('now()');
             if ($guest->save() == false) {
@@ -39,6 +39,58 @@ class GuestsController extends ControllerBase
                     $this->flash->error((string) $message);
                 }
             } else {
+
+                $ocean = new Oceans();
+                $ocean->guest_id = $guest->id;
+                $ocean_second = new OceansSecond();
+                $ocean_second->guest_id = $guest->id;
+                $ocean_third = new OceansThird();
+                $ocean_third->guest_id = $guest->id;
+                $banerjee = new Banerjee();
+                $banerjee->guest_id = $guest->id;
+                $banerjee_second = new BanerjeeSecond();
+                $banerjee_second->guest_id = $guest->id;
+                $banerjee_third = new BanerjeeThird();
+                $banerjee_third->guest_id = $guest->id;
+                $pi = new Pi();
+                $pi->guest_id = $guest->id;
+                $pi_second = new PiSecond();
+                $pi_second->guest_id = $guest->id;
+                $pi_third = new PiThird();
+                $pi_third->guest_id = $guest->id;
+                
+                if ($ocean->save() == false) {
+                    foreach ($ocean->getMessages() as $message) {
+                        die(print_r($message));
+                    }
+                }
+                #$ocean->save();
+                $ocean_second->save();
+                $ocean_third->save();
+                $banerjee->save();         
+                $banerjee_second->save();
+                $banerjee_third->save(); 
+                $pi->save();  
+                $pi_second->save(); 
+                $pi_third->save();
+
+                $guest->ocean_id = $ocean->id;
+                $guest->ocean_second_id = $ocean_second->id;
+                $guest->ocean_third_id = $ocean_third->id;
+                $guest->banerjee_id = $banerjee->id;
+                $guest->banerjee_second_id = $banerjee_second->id;
+                $guest->banerjee_third_id = $banerjee_third->id;
+                $guest->pi_id = $pi->id;
+                $guest->pi_second_id = $pi_second->id;
+                $guest->pi_third_id = $pi_third->id; 
+
+                if ($guest->save() == false) {
+                foreach ($guest->getMessages() as $message) 
+                    {
+                        $this->flash->error((string) $message);
+                    }
+                } else {
+                
                 #$this->tag->setDefault('email', '');
                 #$this->tag->setDefault('password', '');
                 //$this->flash->success('Obrigado pelas informações, responda os questionarios a seguir');
@@ -54,7 +106,7 @@ class GuestsController extends ControllerBase
                         "action"     => "begin_forms",
                     ]
                 );
-
+                }
             }
         }
 
@@ -73,30 +125,29 @@ class GuestsController extends ControllerBase
     public function eoa_firstAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $ocean = new Oceans($data);
-            if(isset($_POST["aq3"])) {
-                $ocean->setQ3(implode(" ",$_POST["aq3"]));
-            }
-            if(isset($_POST["aq8"])) {
-                $ocean->setQ8(implode(" ",$_POST["aq8"]));
-            }
-            if(isset($_POST["aq10"])) {
-                $ocean->setQ10(implode(" ",$_POST["aq10"]));
-            }
+            // $ocean = new Oceans($data);
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $ocean = Oceans::findFirst($guests->ocean_id);
+
             $ocean->guest_id = $guests->id;
-            if ($ocean->save() == false) {
+
+            if(isset($data["aq3"])) {
+                $ocean->setQ3(implode(" ",$data["aq3"]));
+            }
+            if(isset($data["aq8"])) {
+                $ocean->setQ8(implode(" ",$data["aq8"]));
+            }
+            if(isset($data["aq10"])) {
+                $ocean->setQ10(implode(" ",$data["aq10"]));
+            }
+            
+            if ($ocean->save($data) == false) {
                 foreach ($ocean->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->ocean_id = $ocean->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -116,22 +167,18 @@ class GuestsController extends ControllerBase
     public function eoaSendSecondAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $ocean_second = new OceansSecond($data);
+
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $ocean_second = OceansSecond::findFirst($guests->ocean_second_id);
             $ocean_second->guest_id = $guests->id;
 
-            if ($ocean_second->save() == false) {
+            if ($ocean_second->save($data) == false) {
                 foreach ($ocean_second->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->ocean_second_id = $ocean_second->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -151,22 +198,18 @@ class GuestsController extends ControllerBase
     public function eoaSendThirdAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $ocean_third = new OceansThird($data);
+
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $ocean_third = OceansThird::findFirst($guests->ocean_third_id);
             $ocean_third->guest_id = $guests->id;
 
-            if ($ocean_third->save() == false) {
+            if ($ocean_third->save($data) == false) {
                 foreach ($ocean_third->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->ocean_third_id = $ocean_third->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -186,25 +229,22 @@ class GuestsController extends ControllerBase
     public function banerjeeSendAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $banerjee = new Banerjee($data);
-            if(isset($_POST["aq5"])) {
-                $banerjee->setQ5(implode(",",$_POST["aq5"]));
-            }
+
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $banerjee = Banerjee::findFirst($guests->banerjee_id);
             $banerjee->guest_id = $guests->id;
 
-            if ($banerjee->save() == false) {
+            if(isset($data["aq5"])) {
+                $banerjee->setQ5(implode(",",$data["aq5"]));
+            }
+
+            if ($banerjee->save($data) == false) {
                 foreach ($banerjee->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->banerjee_id = $banerjee->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -224,22 +264,18 @@ class GuestsController extends ControllerBase
     public function banerjeeSendSecondAction(){
          if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $banerjee_second = new BanerjeeSecond($data);
+
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $banerjee_second = BanerjeeSecond::findFirst($guests->banerjee_second_id);
             $banerjee_second->guest_id = $guests->id;
 
-            if ($banerjee_second->save() == false) {
+            if ($banerjee_second->save($data) == false) {
                 foreach ($banerjee_second->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->banerjee_second_id = $banerjee_second->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -259,22 +295,17 @@ class GuestsController extends ControllerBase
     public function banerjeeSendThirdAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $banerjee_third = new BanerjeeThird($data);
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $banerjee_third = BanerjeeThird::findFirst($guests->banerjee_third_id);
             $banerjee_third->guest_id = $guests->id;
 
-            if ($banerjee_third->save() == false) {
+            if ($banerjee_third->save($data) == false) {
                 foreach ($banerjee_third->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->banerjee_third_id = $banerjee_third->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -294,25 +325,24 @@ class GuestsController extends ControllerBase
     public function piSendAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $pi = new Pi($data);
-            if(isset($_POST["aq4"])) {
-                $pi->setQ4(implode(",",$_POST["aq4"]));
+            $auth = $this->session->get('auth');
+            $guests = Guests::findFirst($auth['id']);
+            
+            $pi = Pi::findFirst($guests->pi_id);
+            $pi->guest_id = $guests->id;
+
+            if(isset($data["aq4"])) {
+                $pi->setQ4(implode(",",$data["aq4"]));
             }
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
             $pi->guest_id = $guests->id;
 
-            if ($pi->save() == false) {
+            if ($pi->save($data) == false) {
                 foreach ($pi->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->pi_id = $pi->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -332,25 +362,25 @@ class GuestsController extends ControllerBase
     public function piSendSecondAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $pi_second = new PiSecond($data);
-            if(isset($_POST["aq17"])) {
-                $pi_second->setQ17(implode(",",$_POST["aq17"]));
+            
+            $auth = $this->session->get('auth');
+            $guests = Guests::findFirst($auth['id']);
+            
+            $pi_second = PiSecond::findFirst($guests->pi_second_id);
+            $pi_second->guest_id = $guests->id;
+
+            if(isset($data["aq17"])) {
+                $pi_second->setQ17(implode(",",$data["aq17"]));
             }
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
             $pi_second->guest_id = $guests->id;
 
-            if ($pi_second->save() == false) {
+            if ($pi_second->save($data) == false) {
                 foreach ($pi_second->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->pi_second_id = $pi_second->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso');
                 return $this->dispatcher->forward(
                     [
@@ -370,22 +400,17 @@ class GuestsController extends ControllerBase
     public function piSendThirdAction(){
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $pi_third = new PiThird($data);
             $auth = $this->session->get('auth');
             $guests = Guests::findFirst($auth['id']);
+            
+            $pi_third = PiThird::findFirst($guests->pi_third_id);
             $pi_third->guest_id = $guests->id;
 
-            if ($pi_third->save() == false) {
+            if ($pi_third->save($data) == false) {
                 foreach ($pi_third->getMessages() as $message) {
                     $this->flash->error((string) $message);
                 }
             } else {
-                $guests->pi_third_id = $pi_third->id;
-                if ($guests->update() == false) {
-                    foreach ($guests->getMessages() as $message) {
-                        $this->flash->error((string) $message);
-                    }
-                }
                 //$this->flash->success('Respostas salvas com sucesso, obrigado por participar');
                 return $this->dispatcher->forward(
                     [
