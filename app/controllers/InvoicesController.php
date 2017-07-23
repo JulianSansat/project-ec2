@@ -10,7 +10,6 @@ class InvoicesController extends Controller
     {
         $this->view->setTemplateAfter('main');
         $this->tag->setTitle('Resultados');
-        $this->assets->addJs('public/js/jquery.min.js');
     }
 
     public function indexAction()

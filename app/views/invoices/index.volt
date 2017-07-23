@@ -8,7 +8,7 @@
 
 
 
-{{ assets.outputJs() }}
+{{ javascript_include("js/jquery.js") }}
 <script>
 $(document).ready(function () {
 var graficosjs = {{graficosjs}};
