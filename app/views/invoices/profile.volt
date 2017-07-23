@@ -15,7 +15,7 @@
 </style>
 {{ content() }}
 <h2>Resultados</h2>
-<a href="#" id="export" class="btn btn-success btn-sm">Exportar para cvs</a>
+<a href="#" id="export" class="btn btn-success btn-sm">Exportar para csv</a>
 <div id="dados">
 <table id="table" class="table-bordered table-striped table">
     <thead>
