@@ -256,7 +256,7 @@
 </table>
 </div>
 
-{{ javascript_include("js/jquery.js") }}
+{{ javascript_include("js/jquery.min.js") }}
 <script>
     $(document).ready(function () {
 
