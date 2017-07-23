@@ -133,7 +133,7 @@ class InvoicesController extends Controller
             $respostas['q71_1'][] = $pi->q10_1;
         }
 
-        foreach ($pis as $piSecond) {
+        foreach ($pisSecond as $piSecond) {
             $respostas['q72'][] = $piSecond->q11; 
             $respostas['q73'][] = $piSecond->q12;
             $respostas['q74'][] = $piSecond->q13; 
@@ -149,7 +149,7 @@ class InvoicesController extends Controller
             $respostas['q82_1'][] = $piSecond->q21_1;
         }
 
-        foreach ($pis as $piThird) {
+        foreach ($pisThird as $piThird) {
             $respostas['q83'][] = $piThird->q22; 
             $respostas['q84'][] = $piThird->q23;
             $respostas['q85'][] = $piThird->q24; 
