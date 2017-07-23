@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>21. Aspectos como a flexibilidade de preços podem ser elevados. </h4>
+                    <h4>21. Aspectos como a flexibilidade de preços podem ser significativos. </h4>
                     <div class="controls">
                         {{ form.render('alt1q21') }}
                         {{ form.label('alt1q21', ['class': 'control-label']) }}

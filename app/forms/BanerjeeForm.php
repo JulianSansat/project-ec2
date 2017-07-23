@@ -52,16 +52,16 @@ class BanerjeeForm extends Form
         $this->add($alt1q4);
         $this->add($alt2q4);
 
-        $alt1q5 = new Check('alt1q5', ['name' => 'aq5[]', 'value' => "Avaliação de necessidades"]);
-        $alt1q5->setLabel('Avaliação de necessidades');
-        $alt2q5 = new Check('alt2q5', ['name' => 'aq5[]', 'value' => "Análise teórica de projeto"]);
-        $alt2q5->setLabel('Análise teórica de projeto');
-        $alt3q5 = new Check('alt3q5', ['name' => 'aq5[]', 'value' => "Avaliação de processos"]);
-        $alt3q5->setLabel('Avaliação de processos');
-        $alt4q5 = new Check('alt4q5', ['name' => 'aq5[]', 'value' => "Avaliação de impacto"]);
-        $alt4q5->setLabel('Avaliação de impacto');
-        $alt5q5 = new Check('alt5q5', ['name' => 'aq5[]', 'value' => "Análise de custo-benefício, custo-eficácia e custo-comparação"]);
-        $alt5q5->setLabel('Análise de custo-benefício, custo-eficácia e custo-comparação');
+        $alt1q5 = new Check('alt1q5', ['name' => 'aq5[]', 'value' => "Avaliação de necessidades."]);
+        $alt1q5->setLabel('Avaliação de necessidades.');
+        $alt2q5 = new Check('alt2q5', ['name' => 'aq5[]', 'value' => "Análise teórica de projeto."]);
+        $alt2q5->setLabel('Análise teórica de projeto.');
+        $alt3q5 = new Check('alt3q5', ['name' => 'aq5[]', 'value' => "Avaliação de processos."]);
+        $alt3q5->setLabel('Avaliação de processos.');
+        $alt4q5 = new Check('alt4q5', ['name' => 'aq5[]', 'value' => "Avaliação de impacto."]);
+        $alt4q5->setLabel('Avaliação de impacto.');
+        $alt5q5 = new Check('alt5q5', ['name' => 'aq5[]', 'value' => "Análise de custo-benefício, custo-eficácia e custo-comparação."]);
+        $alt5q5->setLabel('Análise de custo-benefício, custo-eficácia e custo-comparação.');
         $alt6q5 = new Check('alt6q5', ['name' => 'aq5[]', 'value' => "Objetivos, resultados e medidas."]);
         $alt6q5->setLabel('Objetivos, resultados e medidas.');
 

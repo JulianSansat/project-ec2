@@ -18,7 +18,7 @@
                     </h4>
                 </div>
                 <div class="form-group">
-                    <h4>11. Governos deveriam flexibilizar seus impostos para diminuir o custo da saúde para os pacientes.</h4>
+                    <h4>72. Governos deveriam flexibilizar seus impostos para diminuir o custo da saúde para os pacientes.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q11') }}
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>12. Patentes podem ser utilizadas como incentivo ao desenvolvimento e pesquisa de novas substâncias bioquímicas.</h4>
+                    <h4>73. Patentes podem ser utilizadas como incentivo ao desenvolvimento e pesquisa de novas substâncias bioquímicas.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q12') }}
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>13. Governos deveriam realizar grandes aquisições de medicamentos visando garantir o acesso a medicamentos básicos pela população.</h4>
+                    <h4>74. Governos deveriam realizar grandes aquisições de medicamentos visando garantir o acesso a medicamentos básicos pela população.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q13') }}
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>14. A P&D deve ser uma das prioridades de investimento do poder público.</h4>
+                    <h4>75. A P&D deve ser uma das prioridades de investimento do poder público.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q14') }}
@@ -86,7 +86,7 @@
                 </div>
 
                  <div class="form-group">
-                    <h4>15. Empresas privadas ligadas ao setor da saúde devem apresentar relatórios anuais com suas ações para promover acesso às tecnologias da saúde.</h4>
+                    <h4>76. Empresas privadas ligadas ao setor da saúde devem apresentar relatórios anuais com suas ações para promover acesso às tecnologias da saúde.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q15') }}
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>16. Os processos de regulamentação para o uso de medicamentos genéricos no mercado podem ser acelerados visando o acesso a recursos básicos de saúde.</h4>
+                    <h4>77. Os processos de regulamentação para o uso de medicamentos genéricos no mercado podem ser acelerados visando o acesso a recursos básicos de saúde.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q16') }}
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>17. Dos mecanismos apresentados para separar os gastos de P&D do preço final de um produto, assinale os que você tem conhecimento: </h4>
+                    <h4>78. Dos mecanismos apresentados para separar os gastos de P&D do preço final de um produto, assinale os que você tem conhecimento: </h4>
                         <div class="controls">
                             {{ form.render('alt1q17') }}
                             {{ form.label('alt1q17', ['class': 'control-label']) }}
@@ -158,7 +158,7 @@
                     </div>
 
                     <div class="form-group">
-                    <h4>18. Você considera as políticas públicas de saúde no Brasil transparentes o suficiente para a população? </h4>
+                    <h4>79. Você considera as políticas públicas de saúde no Brasil transparentes o suficiente para a população? </h4>
                         
                         <div class="controls">
                             {{ form.render('alt1q18') }}
@@ -175,7 +175,7 @@
                     </div>
 
                     <div class="form-group">
-                    <h4>19. Para você, tentativas de retaliação do uso das flexibilidades do Acordo TRIPS da parte de algum governo de país membro/signatário devem ser punidas pelos órgãos competentes?  </h4>
+                    <h4>80. Para você, tentativas de retaliação do uso das flexibilidades do Acordo TRIPS da parte de algum governo de país membro/signatário devem ser punidas pelos órgãos competentes?  </h4>
                         
                         <div class="controls">
                             {{ form.render('alt1q19') }}
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="form-group">
-                    <h4>20. Você considera que as inovações em saúde no Brasil são suficientemente apoiadas e regulamentadas pelo governo?</h4>
+                    <h4>81. Você considera que as inovações em saúde no Brasil são suficientemente apoiadas e regulamentadas pelo governo?</h4>
                         
                         <div class="controls">
                             {{ form.render('alt1q20') }}
@@ -209,7 +209,7 @@
                     </div>
 
                     <div class="form-group">
-                            <h4>21. Você tem conhecimento de alguma inovação presente ou em andamento no tratamento ou combate à tuberculose? </h4>
+                            <h4>82. Você tem conhecimento de alguma inovação presente ou em andamento no tratamento ou combate à tuberculose? </h4>
                             <div class="controls">
                             {{ form.render('alt1q21') }}
                             {{ form.label('alt1q21', ['class': 'control-label']) }}

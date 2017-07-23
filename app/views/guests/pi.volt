@@ -29,7 +29,7 @@
                     </h4>
                 </div>
                 <div class="form-group">
-                    <h4>1. Como você classifica seu conhecimento em relação às interações entre a Organização Mundial 
+                    <h4>62. Como você classifica seu conhecimento em relação às interações entre a Organização Mundial 
                         da Saúde (OMS), a Organização Mundial de Propriedade Intelectual (OMPI) e a Organização Mundial 
                         do Comércio (OMC) com foco na saúde pública?</h4>
                         
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>2. Você sabe o que é Fardo Mundial da Doença (em inglês, Global Disease Burden)?</h4>
+                    <h4>63. Você sabe o que é Fardo Mundial da Doença (em inglês, Global Disease Burden)?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q2') }}
@@ -65,20 +65,20 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>3. Você tem conhecimento sobre o termo ‘Doenças Negligenciadas’?</h4>
+                    <h4>64. Você tem conhecimento sobre o termo ‘Doenças Negligenciadas’?</h4>
                         
                     <div class="controls">
-                        {{ form.render('alt1q2') }}
-                        {{ form.label('alt1q2', ['class': 'control-label']) }}
+                        {{ form.render('alt1q3') }}
+                        {{ form.label('alt1q3', ['class': 'control-label']) }}
                     </div>
                     <div class="controls">
-                        {{ form.render('alt2q2') }}
-                        {{ form.label('alt2q2', ['class': 'control-label']) }}
+                        {{ form.render('alt2q3') }}
+                        {{ form.label('alt2q3', ['class': 'control-label']) }}
                     </div>
                 </div>
 
                 <div class="form-group">
-                            <h4>4. Dos seguintes elementos, assinale os que você acredita exercerem influência no desenvolvimento de novas tecnologias na área da saúde:</h4>
+                            <h4>65. Dos seguintes elementos, assinale os que você acredita exercerem influência no desenvolvimento de novas tecnologias na área da saúde:</h4>
                             <div class="controls">
                             {{ form.render('alt1q4') }}
                             {{ form.label('alt1q4', ['class': 'control-label']) }}
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>5. Você tem conhecimento sobre o desenvolvimento de novos medicamentos? </h4>
+                    <h4>66. Você tem conhecimento sobre o desenvolvimento de novos medicamentos? </h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q5') }}
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>6. Como você avalia o uso de patentes em relação ao desenvolvimento de novas drogas? </h4>
+                    <h4>67. Como você avalia o uso de patentes em relação ao desenvolvimento de novas drogas? </h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q6') }}
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>7. Você tem conhecimento acerca do Acordo sobre Aspectos dos Direitos de Propriedade Intelectual ligados ao Comércio (TRIPS)? </h4>
+                    <h4>68. Você tem conhecimento acerca do Acordo sobre Aspectos dos Direitos de Propriedade Intelectual ligados ao Comércio (TRIPS)? </h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q7') }}
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>8. Você conhece as flexibilidades advindas do acordo TRIPS relacionadas a produtos farmacêuticos? </h4>
+                    <h4>69. Você conhece as flexibilidades advindas do acordo TRIPS relacionadas a produtos farmacêuticos? </h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q8') }}
@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="form-group">
-                            <h4>9. Para você, os investimentos na área da saúde (pesquisa, desenvolvimento e entrega de produtos e serviços) devem partir prioritariamente:</h4>
+                            <h4>70. Para você, os investimentos na área da saúde (pesquisa, desenvolvimento e entrega de produtos e serviços) devem partir prioritariamente:</h4>
                             <div class="controls">
                             {{ form.render('alt1q9') }}
                             {{ form.label('alt1q9', ['class': 'control-label']) }}
@@ -182,7 +182,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>10. Das formas de controle e redução de despesas ligadas à saúde, assinale as que você tem conhecimento:</h4>
+                    <h4>71. Das formas de controle e redução de despesas ligadas à saúde, assinale as que você tem conhecimento:</h4>
                         <div class="controls">
                             {{ form.render('alt1q10') }}
                             {{ form.label('alt1q10', ['class': 'control-label']) }}

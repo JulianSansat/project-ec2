@@ -113,9 +113,5 @@ class BanerjeeThirdForm extends Form
         $this->add($alt2q31);
         $this->add($alt3q31);
 
-        $alt1q32 = new Text('q32');
-
-        $this->add($alt1q32);
-
     }
 }

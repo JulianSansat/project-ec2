@@ -3,9 +3,10 @@
 
 <div class="page-header">
     <h2>Registro de participante</h2>
+    <p>Preenchimento facultativo</p>
 </div>
 
-{{ form('guests', 'id': 'GuestsForm', 'onbeforesubmit': 'return false') }}
+{{ form('guests', 'id': 'GuestsForm', 'onbeforesubmit': 'return true') }}
 
     <fieldset>
 
@@ -52,7 +53,7 @@
         </div>
         <br>
         <div class="form-actions">
-            {{ submit_button('Registrar', 'class': 'btn btn-primary', 'onclick': 'return SignUp.validate();') }}
+            {{ submit_button('Registrar', 'class': 'btn btn-primary') }}
         </div>
 
     </fieldset>

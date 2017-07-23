@@ -91,7 +91,6 @@ class BanerjeeThird extends \Phalcon\Mvc\Model
      */
     public $q31;
 
-    public $q32;
 
     /**
      * Initialize method for model.

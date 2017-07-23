@@ -1,7 +1,5 @@
 <?php
 
-use Phalcon\Validation;
-use Phalcon\Validation\Validator\Email as EmailValidator;
 
 class Guests extends \Phalcon\Mvc\Model
 {
@@ -82,6 +80,8 @@ class Guests extends \Phalcon\Mvc\Model
 
     public $pi_third_id;
 
+    public $sugestion;
+
     public function getOcean(){
         return Oceans::findById($this->ocean_id);
     }
@@ -119,27 +119,7 @@ class Guests extends \Phalcon\Mvc\Model
     }
 
 
-    /**
-     * Validations and business logic
-     *
-     * @return boolean
-     */
-    public function validation()
-    {
-        $validator = new Validation();
-
-        $validator->add(
-            'email',
-            new EmailValidator(
-                [
-                    'model'   => $this,
-                    'message' => 'Please enter a correct email address',
-                ]
-            )
-        );
-
-        return $this->validate($validator);
-    }
+   
 
     /**
      * Initialize method for model.

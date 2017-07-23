@@ -21,7 +21,7 @@
         {{ form('guests/banerjeeSend', 'method': 'post') }}
             <fieldset>
                 <div class="form-group">
-                    <h4>1. Como você classifica o seu conhecimento sobre o Método de Banerjee (ou Método Randômico Controlado)?</h4>
+                    <h4>31. Como você classifica o seu conhecimento sobre o Método de Banerjee (ou Método Randômico Controlado)?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q1') }}
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>2. Você leu o livro “Running Randomized Evaluations – A Practical Guide”, de Rachel Glennerster e Kudzai Takavarasha?</h4>
+                    <h4>32. Você leu o livro “Running Randomized Evaluations – A Practical Guide”, de Rachel Glennerster e Kudzai Takavarasha?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q2') }}
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>3. Você leu o livro “Strong Medicine – Creating Incentives for Pharmaceutical Research on Neglected Diseases”, de Michael Kremer e Rachel Glennerster?</h4>
+                    <h4>33. Você leu o livro “Strong Medicine – Creating Incentives for Pharmaceutical Research on Neglected Diseases”, de Michael Kremer e Rachel Glennerster?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q3') }}
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>4. Você leu o livro “Poor Economics: a radical rethinking of the way to fight global poverty”, de Abhijit Banerjee e Esther Duflo?</h4>
+                    <h4>34. Você leu o livro “Poor Economics: a radical rethinking of the way to fight global poverty”, de Abhijit Banerjee e Esther Duflo?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q4') }}
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="form-group">
-                            <h4>5. Dos métodos de avaliação listados a seguir (seguindo nomenclatura proposta em GLENNERSTER, Rachel; TAKAVARASHA, Kudzai. (2013). Running Randomized Evaluations: A Practical Guide. Princeton University Press, Princeton, NJ) assinale os quais você possui algum conhecimento:  </h4>
+                            <h4>35. Dos métodos de avaliação listados a seguir (seguindo nomenclatura proposta em GLENNERSTER, Rachel; TAKAVARASHA, Kudzai. (2013). Running Randomized Evaluations: A Practical Guide. Princeton University Press, Princeton, NJ) assinale os quais você possui algum conhecimento:  </h4>
                             <div class="controls">
                             {{ form.render('alt1q5') }}
                             {{ form.label('alt1q5', ['class': 'control-label']) }}
@@ -108,14 +108,14 @@
                             </div>
                 </div>
                 <div class="form-group">
-                    <h4>6. O que você entende por randomizar?</h4>
+                    <h4>36. O que você entende por randomizar?</h4>
                         
                     <div class="controls">
                         {{ form.render('q6', ['class': 'form-control']) }}
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>7. Das afirmações acerca do Método Banerjee, marque as caixas de acordo com o seu grau de concordância:</h4>
+                    <h4>37. Das afirmações acerca do Método Banerjee, marque as caixas de acordo com o seu grau de concordância:</h4>
                 </div>
                 <div class="form-group">
                     <h4>Medir o impacto de programas sociais e transformá-lo em dados estatísticos é uma ferramenta indispensável para a construção de políticas públicas eficientes.</h4>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>As avaliações randomizadas podem não serem éticas.</h4>
+                    <h4>Circunstancialmente, as avaliações randomizadas não são éticas.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q7_5') }}
@@ -219,7 +219,7 @@
                          os dois grupos são analisados e perguntas específicas sobre a intervenção podem ser respondidas. Acerca da divisão de grupos de forma randomizada, as amostras estatisticamente idênticas:</p> 
                 </div>
                 <div class="form-group">
-                    <h4>8. Permitem saber o que teria acontecido na ausência de uma intervenção.</h4>
+                    <h4>38. Permitem saber o que teria acontecido na ausência de uma intervenção.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q8') }}
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>9. Permitem se obter uma amostra fiel em relação ao grupo geral de estudo.</h4>
+                    <h4>39. Permitem se obter uma amostra fiel em relação ao grupo geral de estudo.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q9') }}
@@ -251,7 +251,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>10. Permitem descobrir o impacto de um programa ou intervenção.</h4>
+                    <h4>40. Permitem descobrir o impacto de um programa ou intervenção.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q10') }}
@@ -267,7 +267,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>11. Significam uma garantia de que os grupos não vão se interagir entre si.</h4>
+                    <h4>41. Significam uma garantia de que os grupos não vão se interagir entre si.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q11') }}
@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>12. Permitem se obter resultados livres de viés de separação de grupos.</h4>
+                    <h4>42. Permitem se obter resultados livres de viés de separação de grupos.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q12') }}

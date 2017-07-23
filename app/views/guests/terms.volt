@@ -18,7 +18,7 @@
             <h2>Resolução nº 466/12 – Conselho Nacional de Saúde</h2>
             
             <p>Convidamos o (a) Sr.(a) para participar, como voluntário (a), da pesquisa <b>“Alternativa inovadora para construção de Políticas Públicas de Patentes dedicadas a Doenças Negligenciadas: conjecturas e aplicações para o caso da Tuberculose no Brasil”</b>, que está sob a responsabilidade do pesquisador Rogério Almeida Meneghin, contatos: (79) 3022-3363, (79) 9.9937-3495 e (32) 9.9125-7414 / e-mail: rogerioalmeidameneghin@gmail.com e está sob a orientação da Professora Doutora Ana Eleonora Almeida Paixão, contato: (79) 3024-1915, (79) 9.9982-1033 / e-mail: aepaixao@gmail.com .
-            Após ser esclarecido (a) sobre as informações a seguir, no caso de aceitar a fazer parte do estudo, rubrique as folhas e assine ao final deste documento, que está em duas vias. Uma delas é sua e a outra é do pesquisador responsável. Caso, seja aplicado o questionário na versão eletrônica, no caso de aceitar, basta “clicar” no campo “ciente e de acordo”. Em caso de recusa o (a) Sr.(a) não será penalizado (a) de forma alguma. O (a) Senhor (a) tem o direito de retirar o consentimento a qualquer tempo, sem qualquer penalidade.</p>
+            Após ser esclarecido (a) sobre as informações a seguir, no caso de aceitar a fazer parte do estudo, basta “clicar” no ícone “aceitar”. Em caso de recusa o (a) Sr.(a) não será penalizado (a) de forma alguma. O (a) Senhor (a) tem o direito de retirar o consentimento a qualquer tempo, sem qualquer penalidade.</p>
             
             
             <h2>INFORMAÇÕES SOBRE A PESQUISA</h2>

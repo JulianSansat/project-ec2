@@ -59,10 +59,10 @@ class OceansForm extends Form
         $alt5q3->setLabel('Estimular estrategicamente a criação de novas experiências.');
         $alt6q3 = new Check("alt6q3", ['name' => 'aq3[]', 'value' => 'Desenvolver estrategicamente novos modelos de negócio.']);
         $alt6q3->setLabel('Desenvolver estrategicamente novos modelos de negócio.');
-        $alt7q3 = new Check("alt7q3", ['name' => 'aq3[]', 'value' => 'Outras']);
-        $alt7q3->setLabel('Outras');
-        $alt8q3 = new Check("alt8q3", ['name' => 'aq3[]', 'value' => 'Não sei']);
-        $alt8q3->setLabel('Não sei');
+        $alt7q3 = new Check("alt7q3", ['name' => 'aq3[]', 'value' => 'Outras.']);
+        $alt7q3->setLabel('Outras.');
+        $alt8q3 = new Check("alt8q3", ['name' => 'aq3[]', 'value' => 'Não sei.']);
+        $alt8q3->setLabel('Não sei.');
 
         $this->add($alt1q3);
         $this->add($alt2q3);
@@ -77,8 +77,8 @@ class OceansForm extends Form
         $alt1q4->setLabel('A busca para oferecer o melhor produto do setor, visando a competitividade.');
         $alt2q4 = new \Phalcon\Forms\Element\Radio("alt2q4", ['name' => 'q4', 'value' => 'A busca por novas demandas ainda não exploradas por meio da inovação de valor.']);
         $alt2q4->setLabel('A busca por novas demandas ainda não exploradas por meio da inovação de valor.');
-        $alt3q4 = new \Phalcon\Forms\Element\Radio("alt3q4", ['name' => 'q4', 'value' => 'Não sei']);
-        $alt3q4->setLabel('Não sei');
+        $alt3q4 = new \Phalcon\Forms\Element\Radio("alt3q4", ['name' => 'q4', 'value' => 'Não sei.']);
+        $alt3q4->setLabel('Não sei.');
 
         $this->add($alt1q4);
         $this->add($alt2q4);
@@ -122,8 +122,8 @@ class OceansForm extends Form
         $alt5q8->setLabel('Superar as principais barreiras organizacionais.');
         $alt6q8 = new Check("alt6q8", ['name' => 'aq8[]', 'value' => 'Embutir a execução na estratégia.']);
         $alt6q8->setLabel('Embutir a execução na estratégia.');
-        $alt7q8 = new Check("alt7q8", ['name' => 'aq8[]', 'value' => 'Desconheço estes princípios']);
-        $alt7q8->setLabel('Desconheço estes princípios');
+        $alt7q8 = new Check("alt7q8", ['name' => 'aq8[]', 'value' => 'Desconheço estes princípios.']);
+        $alt7q8->setLabel('Desconheço estes princípios.');
         $alt8q8 = new Check("alt8q8", ['name' => 'aq8[]', 'value' => 'Utiliza-se outros termos para estes princípios.']);
         $alt8q8->setLabel('Utiliza-se outros termos para estes princípios.');
 
@@ -202,8 +202,8 @@ class OceansForm extends Form
         $alt3q13->setLabel('A empresa não divulga a estratégia.');
         $alt4q13 = new \Phalcon\Forms\Element\Radio("alt4q13", ['name' => 'q13', 'value' => 'A empresa não adota a Estratégia do Oceano Azul.']);
         $alt4q13->setLabel('A empresa não adota a Estratégia do Oceano Azul.');
-        $alt5q13 = new \Phalcon\Forms\Element\Radio("alt5q13", ['name' => 'q13', 'value' => 'Não sei']);
-        $alt5q13->setLabel('Não sei');
+        $alt5q13 = new \Phalcon\Forms\Element\Radio("alt5q13", ['name' => 'q13', 'value' => 'Não sei.']);
+        $alt5q13->setLabel('Não sei.');
 
         $this->add($alt1q13);
         $this->add($alt2q13);

@@ -9,13 +9,13 @@ class SessionController extends Controller
 {
     public function initialize()
     {
-        $this->view->setTemplateAfter('main');
-        $this->tag->setTitle('Sign Up/Sign In');
         $this->assets->addJs('public/js/jquery.min.js');
     }
 
     public function indexAction()
     {
+        $this->view->setTemplateAfter('main');
+        $this->tag->setTitle('Sign Up/Sign In');
         if (!$this->request->isPost()) {
             if($this->session->get('auth')){
                 $this->session->remove('auth');
@@ -82,14 +82,21 @@ class SessionController extends Controller
      */
     public function endAction()
     {
+        $auth = $this->session->get('auth');
+		
         $this->session->remove('auth');
-        $this->flash->success('Goodbye!');
 
-        return $this->dispatcher->forward(
-            [
-                "controller" => "index",
-                "action"     => "index",
-            ]
-        );
+        if ($auth['role'] != 'Guests'){
+                $this->flash->success('Goodbye!');
+                return $this->dispatcher->forward(
+                [
+                    "controller" => "index",
+                    "action"     => "index",
+                ]
+            ); 
+		} 
+
+        $this->view->setTemplateAfter('container');
+        
     }
 }

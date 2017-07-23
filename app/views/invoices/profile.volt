@@ -21,6 +21,11 @@
     <thead>
         <tr>
             <td>Nome</td>
+            <td>Tel</td>
+            <td>Idade</td>
+            <td>Escolaridade</td>
+            <td>Area de estudo</td>
+            <td>Email</td>
             <td>q1</td>
             <td>q2</td>
             <td>q2_1</td>
@@ -56,88 +61,95 @@
             <td>q29</td>
             <td>q30</td>
 
-            <td>q1</td>
-            <td>q2</td>
-            <td>q3</td>
-            <td>q4</td>
-            <td>q5</td>
-            <td>q6</td>
-            <td>q7_1</td>
-            <td>q7_2</td>
-            <td>q7_3</td>
-            <td>q7_4</td>
-            <td>q7_5</td>
-            <td>q7_6</td>
-            <td>q8</td>
-            <td>q9</td>
-            <td>q10</td>
-            <td>q11</td>
-            <td>q12</td>
-            
-            <td>q13</td>
-            <td>q14</td>
-            <td>q15</td>
-            <td>q16</td>
-            <td>q17</td>
-            <td>q18</td>
-            <td>q19</td>
-            <td>q20</td>
-            <td>q20_1</td>
-            <td>q21</td>
-
-            <td>q22</td>
-            <td>q23</td>
-            <td>q24</td>
-            <td>q25</td>
-            <td>q26</td>
-            <td>q26_1</td>
-            <td>q27</td>
-            <td>q28</td>
-            <td>q29</td>
-            <td>q30</td>
             <td>q31</td>
             <td>q32</td>
+            <td>q33</td>
+            <td>q34</td>
+            <td>q35</td>
+            <td>q36</td>
+            <td>q37_1</td>
+            <td>q37_2</td>
+            <td>q37_3</td>
+            <td>q37_4</td>
+            <td>q37_5</td>
+            <td>q37_6</td>
+            <td>q38</td>
+            <td>q39</td>
+            <td>q40</td>
+            <td>q41</td> 
+            <td>q42</td><!--ok-->
+            
+            <td>q43</td>
+            <td>q44</td>
+            <td>q45</td>
+            <td>q46</td>
+            <td>q47</td>
+            <td>q48</td>
+            <td>q49</td>
+            <td>q50</td>
+            <td>q50_1</td>
+            <td>q51</td><!--ok-->
 
-            <td>q1</td>
-            <td>q2</td>
-            <td>q3</td>
-            <td>q4</td>
-            <td>q5</td>
-            <td>q6</td>
-            <td>q7</td>
-            <td>q8</td>
-            <td>q9</td>
-            <td>q10</td>
-            <td>q10_1</td>
+            <td>q52</td>
+            <td>q53</td>
+            <td>q54</td>
+            <td>q55</td>
+            <td>q56</td>
+            <td>q56_1</td>
+            <td>q57</td>
+            <td>q58</td>
+            <td>q59</td>
+            <td>q60</td>
+            <td>q61</td><!--ok-->
 
-            <td>q11</td>
-            <td>q12</td>
-            <td>q13</td>
-            <td>q14</td>
-            <td>q15</td>
-            <td>q16</td>
-            <td>q17</td>
-            <td>q17_1</td>
-            <td>q18</td>
-            <td>q20</td>
-            <td>q21</td>
-            <td>q21_1</td>
+            <td>q62</td>
+            <td>q63</td>
+            <td>q64</td>
+            <td>q65</td>
+            <td>q66</td>
+            <td>q67</td>
+            <td>q68</td>
+            <td>q69</td>
+            <td>q70</td>
+            <td>q71</td>
+            <td>q71_1</td><!--ok-->
 
-            <td>q22</td>
-            <td>q23</td>
-            <td>q24</td>
-            <td>q25</td>
-            <td>q26</td>
-            <td>q27</td>
-            <td>q28</td>
-            <td>q29</td>
-            <td>q30</td>
+            <td>q72</td>
+            <td>q73</td>
+            <td>q74</td>
+            <td>q75</td>
+            <td>q76</td>
+            <td>q77</td>
+            <td>q78</td>
+            <td>q78_1</td>
+            <td>q79</td>
+            <td>q80</td>
+            <td>q81</td>
+            <td>q82</td>
+            <td>q82_1</td><!--ok-->
+
+            <td>q83</td>
+            <td>q84</td>
+            <td>q85</td>
+            <td>q86</td>
+            <td>q87</td>
+            <td>q88</td>
+            <td>q89</td>
+            <td>q90</td>
+            <td>q91</td><!--ok-->
+
+            <td>q92</td>
         </tr>
     </thead>
     <tbody id="list">
       {% for guest in guests %}
         <tr>
             <td>{{ guest.name }}</td>
+            <td>{{ guest.tel }}</td>
+            <td>{{ guest.age }}</td>
+            <td>{{ guest.escolarship }}</td>
+            <td>{{ guest.study_area }}</td>
+            <td>{{ guest.email }}</td>
             <td>{{ guest.oceans.q1 }}</td>
             <td>{{ guest.oceans.q2 }}</td>
             <td>{{ guest.oceans.q2_1 }}</td>
@@ -165,7 +177,7 @@
             <td>{{ guest.oceansSecond.q21 }}</td>
             <td>{{ guest.oceansSecond.q22 }}</td>
             <td>{{ guest.oceansSecond.q23 }}</td>
-            <td>{{ guest.q24 }}</td>
+            <td>{{ guest.oceansThird.q24 }}</td>
             <td>{{ guest.oceansThird.q25 }}</td>
             <td>{{ guest.oceansThird.q26 }}</td>
             <td>{{ guest.oceansThird.q27 }}</td>
@@ -188,8 +200,8 @@
             <td>{{ guest.banerjee.q8 }}</td>
             <td>{{ guest.banerjee.q9 }}</td>
             <td>{{ guest.banerjee.q10 }}</td>
-            <td>{{ guest.banerjee.q11 }}</td>
-            <td>{{ guest.banerjee.q12 }}</td>
+            <td>{{ guest.banerjee.q11 }}</td> 
+            <td>{{ guest.banerjee.q12 }}</td><!--ok-->
             
             <td>{{ guest.banerjeeSecond.q13 }}</td>
             <td>{{ guest.banerjeeSecond.q14 }}</td>
@@ -200,7 +212,7 @@
             <td>{{ guest.banerjeeSecond.q19 }}</td>
             <td>{{ guest.banerjeeSecond.q20 }}</td>
             <td>{{ guest.banerjeeSecond.q20_1 }}</td>
-            <td>{{ guest.banerjeeSecond.q21 }}</td>
+            <td>{{ guest.banerjeeSecond.q21 }}</td><!--ok-->
 
             <td>{{ guest.banerjeeThird.q22 }}</td>
             <td>{{ guest.banerjeeThird.q23 }}</td>
@@ -212,8 +224,7 @@
             <td>{{ guest.banerjeeThird.q28 }}</td>
             <td>{{ guest.banerjeeThird.q29 }}</td>
             <td>{{ guest.banerjeeThird.q30 }}</td>
-            <td>{{ guest.banerjeeThird.q31 }}</td>
-            <td>{{ guest.banerjeeThird.q32 }}</td>
+            <td>{{ guest.banerjeeThird.q31 }}</td><!--ok-->
 
             <td>{{ guest.pi.q1 }}</td>
             <td>{{ guest.pi.q2 }}</td>
@@ -225,7 +236,7 @@
             <td>{{ guest.pi.q8 }}</td>
             <td>{{ guest.pi.q9 }}</td>
             <td>{{ guest.pi.q10 }}</td>
-            <td>{{ guest.pi.q10_1 }}</td>
+            <td>{{ guest.pi.q10_1 }}</td><!--ok-->
 
             <td>{{ guest.piSecond.q11 }}</td>
             <td>{{ guest.piSecond.q12 }}</td>
@@ -236,9 +247,10 @@
             <td>{{ guest.piSecond.q17 }}</td>
             <td>{{ guest.piSecond.q17_1 }}</td>
             <td>{{ guest.piSecond.q18 }}</td>
+            <td>{{ guest.piSecond.q19 }}</td>
             <td>{{ guest.piSecond.q20 }}</td>
             <td>{{ guest.piSecond.q21 }}</td>
-            <td>{{ guest.piSecond.q21_1 }}</td>
+            <td>{{ guest.piSecond.q21_1 }}</td><!--ok-->
 
             <td>{{ guest.piThird.q22 }}</td>
             <td>{{ guest.piThird.q23 }}</td>
@@ -248,7 +260,8 @@
             <td>{{ guest.piThird.q27 }}</td>
             <td>{{ guest.piThird.q28 }}</td>
             <td>{{ guest.piThird.q29 }}</td>
-            <td>{{ guest.piThird.q30 }}</td>
+            <td>{{ guest.piThird.q30 }}</td><!--ok-->
+            <td>{{ guest.sugestion}}</td>
 
         </tr>
       {% endfor %}

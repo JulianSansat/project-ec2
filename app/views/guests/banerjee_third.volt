@@ -18,7 +18,7 @@
         {{ form('guests/banerjeeSendThird', 'method': 'post') }}
             <fieldset>
                 <div class="form-group">
-                    <h4>22. Você considera as políticas de combate à tuberculose existentes no Brasil suficientes para a erradicação da doença?</h4>
+                    <h4>52. Você considera as políticas de combate à tuberculose existentes no Brasil suficientes para a erradicação da doença?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q22') }}
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>23. Você considera o Método Banerjee uma opção para intensificar o combate à tuberculose?</h4>
+                    <h4>53. Você considera o Método Banerjee uma opção para intensificar o combate à tuberculose?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q23') }}
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>24. Você tem conhecimento sobre alguma política pública que enfatize o combate à tuberculose no Brasil?</h4>
+                    <h4>54. Você tem conhecimento sobre alguma política pública que enfatize o combate à tuberculose no Brasil?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q24') }}
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>25. Com base em seus conhecimentos sobre o assunto, acredita que acabar com a pobreza possa significar direta ou indiretamente um avanço no combate à tuberculose?</h4>
+                    <h4>55. Com base em seus conhecimentos sobre o assunto, acredita que acabar com a pobreza possa significar direta ou indiretamente um avanço no combate à tuberculose?</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q25') }}
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>26. Você tem conhecimento de alguma política pública no contexto brasileiro que tenha sido elaborada com o Método Banerjee? </h4>
+                    <h4>56. Você tem conhecimento de alguma política pública no contexto brasileiro que tenha sido elaborada com o Método Banerjee? </h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q26') }}
@@ -91,7 +91,7 @@
                     <h4>As políticas públicas focadas no combate à tuberculose terão melhores resultados se:</h4>
                 </div>
                 <div class="form-group">
-                    <h4>27. Elaboradas com base em evidências científicas sobre seu impacto.</h4>
+                    <h4>57. Elaboradas com base em evidências científicas sobre seu impacto.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q27') }}
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>28. Forem testadas e adaptadas para diferentes contextos.</h4>
+                    <h4>58. Forem testadas e adaptadas para diferentes contextos.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q28') }}
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>29. Sofrerem interferência de órgãos governamentais com base em dados gerais sobre a população.</h4>
+                    <h4>59. Sofrerem interferência de órgãos governamentais com base em dados gerais sobre a população.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q29') }}
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>30. Contarem com as políticas públicas já existentes no país.</h4>
+                    <h4>60. Contarem com as políticas públicas já existentes no país.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q30') }}
@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>31. Elaboradas de acordo com o Método Banerjee.</h4>
+                    <h4>61. Elaboradas de acordo com o Método Banerjee.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q31') }}
@@ -169,14 +169,6 @@
                         {{ form.render('alt3q31') }}
                         {{ form.label('alt3q31', ['class': 'control-label']) }}
                     </div>
-                </div>
-                <div class="form-group">
-                    <h4>32. Prezado Participante, caso seja de vosso interesse, por gentileza, utilize este espaço para manifestar sua contribuição para o aperfeiçoamento do questionário ou para o aperfeiçoamento no combate à tuberculose.</h4>
-                        
-                    <div class="controls">
-                        {{ form.render('q32', ['class': 'form-control']) }}
-                    </div>
-
                 </div>
 
         </div>

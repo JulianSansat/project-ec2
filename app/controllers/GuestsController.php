@@ -15,23 +15,40 @@ class GuestsController extends ControllerBase
         $form = new GuestsForm;
 
         if ($this->request->isPost()) {
-
-            $name = $this->request->getPost('name', array('string', 'striptags'));
-            $tel = $this->request->getPost('tel', 'int');
+            $guestData = $this->request->getPost();
+            /*$name = $this->request->getPost('name', array('string', 'striptags'));
+            $sugestion = $this->request->getPost('tel', 'int');
             $email = $this->request->getPost('email', 'email');
             $escolarship = $this->request->getPost('escolarship');
             $age = $this->request->getPost('age');
-            $study_area = $this->request->getPost('study_area');
+            $study_area = $this->request->getPost('study_area');*/
 
 
             $guest = new Guests();
-            $guest->name = $name;
-            $guest->tel = $tel;
-            $guest->name = $name;
-            $guest->email = $email;
-            $guest->escolarship = $escolarship;
-            $guest->age = $age;
-            $guest->study_area = $study_area; 
+
+            if (isset($guestData["name"]) && !empty($guestData["name"])){
+                $guest->name = strip_tags($guestData["name"]);
+            }
+
+            if (isset($guestData["tel"]) && !empty($guestData["tel"])){
+                $guest->tel = strip_tags($guestData["tel"]);
+            }
+
+            if (isset($guestData["email"]) && !empty($guestData["email"])){
+                $guest->email = strip_tags($guestData["email"]);
+            }
+
+            if (isset($guestData["escolarship"]) && !empty($guestData["escolarship"])){
+                $guest->escolarship = strip_tags($guestData["escolarship"]);
+            }
+
+            if (isset($guestData["age"]) && !empty($guestData["age"])){
+                $guest->age = strip_tags($guestData["age"]);
+            }
+            
+            if (isset($guestData["study_area"]) && !empty($guestData["study_area"])){
+                $guest->study_area = strip_tags($guestData["study_area"]);
+            }
 
             $guest->created_at = new Phalcon\Db\RawValue('now()');
             if ($guest->save() == false) {
@@ -414,6 +431,37 @@ class GuestsController extends ControllerBase
                 //$this->flash->success('Respostas salvas com sucesso, obrigado por participar');
                 return $this->dispatcher->forward(
                     [
+                        "controller" => "guests",
+                        "action"     => "sugestion",
+                    ]
+                );
+            }
+        }
+    }
+
+    public function sugestionAction(){
+       
+    }
+
+    public function sugestionSendAction(){
+        if ($this->request->isPost()) {
+            $data = $this->request->getPost();
+            $auth = $this->session->get('auth');
+            $guests = Guests::findFirst($auth['id']);
+            
+
+            if (isset($data["sugestion"]) && !empty($data["sugestion"])){
+                $guests->sugestion = strip_tags($data["sugestion"]);
+            }
+
+            if ($guests->save() == false) {
+                foreach ($guests->getMessages() as $message) {
+                    $this->flash->error((string) $message);
+                }
+            } else {
+                //$this->flash->success('Respostas salvas com sucesso, obrigado por participar');
+                return $this->dispatcher->forward(
+                    [
                         "controller" => "session",
                         "action"     => "end",
                     ]
@@ -421,5 +469,6 @@ class GuestsController extends ControllerBase
             }
         }
     }
+    
 
 }

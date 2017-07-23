@@ -16,6 +16,15 @@ class InvoicesController extends Controller
     {
         
         $oceans = Oceans::find();
+        $oceansSecond = OceansSecond::find();
+        $oceansThird = OceansThird::find();
+        $banerjees = Banerjee::find();
+        $banerjeesSecond = BanerjeeSecond::find();
+        $banerjeesThird = BanerjeeThird::find();
+        $pis = Pi::find();
+        $pisSecond = PiSecond::find();
+        $pisThird = PiThird::find();
+
         $respostas = [];
         $graficos= [];
         $altresp = [];
@@ -44,6 +53,113 @@ class InvoicesController extends Controller
             $respostas['q17'][] = $ocean->q17; 
             $respostas['q18'][] = $ocean->q18;
         }
+
+        foreach ($oceansSecond as $oceanSecond) {
+            $respostas['q19'][] = $oceanSecond->q19; 
+            $respostas['q20'][] = $oceanSecond->q20;
+            $respostas['q21'][] = $oceanSecond->q21; 
+            $respostas['q22'][] = $oceanSecond->q22; 
+            $respostas['q23'][] = $oceanSecond->q23; 
+        }
+
+        foreach ($oceansThird as $oceanThird) {
+            $respostas['q24'][] = $oceanThird->q24; 
+            $respostas['q25'][] = $oceanThird->q25;
+            $respostas['q26'][] = $oceanThird->q26; 
+            $respostas['q27'][] = $oceanThird->q27; 
+            $respostas['q28'][] = $oceanThird->q28;
+            $respostas['q29'][] = $oceanThird->q29; 
+            $respostas['q30'][] = $oceanThird->q30; 
+        }
+
+        foreach ($banerjees as $banerjee) {
+            $respostas['q31'][] = $banerjee->q1; 
+            $respostas['q32'][] = $banerjee->q2;
+            $respostas['q33'][] = $banerjee->q3; 
+            $respostas['q34'][] = $banerjee->q4; 
+            $respostas['q35'][] = $banerjee->q5; 
+            $respostas['q36'][] = $banerjee->q6; 
+            $respostas['q37'][] = $banerjee->q7_1; 
+            $respostas['q37_1'][] = $banerjee->q7_2; 
+            $respostas['q37_2'][] = $banerjee->q7_3; 
+            $respostas['q37_4'][] = $banerjee->q7_4; 
+            $respostas['q37_5'][] = $banerjee->q7_5; 
+            $respostas['q37_6'][] = $banerjee->q7_6; 
+            $respostas['q38'][] = $banerjee->q8; 
+            $respostas['q39'][] = $banerjee->q9; 
+            $respostas['q40'][] = $banerjee->q10; 
+            $respostas['q41'][] = $banerjee->q11; 
+            $respostas['q42'][] = $banerjee->q12;
+        }
+
+        foreach ($banerjeesSecond as $banerjeeSecond) {
+            $respostas['q43'][] = $banerjeeSecond->q13; 
+            $respostas['q44'][] = $banerjeeSecond->q14;
+            $respostas['q45'][] = $banerjeeSecond->q15; 
+            $respostas['q46'][] = $banerjeeSecond->q16; 
+            $respostas['q47'][] = $banerjeeSecond->q17; 
+            $respostas['q48'][] = $banerjeeSecond->q18; 
+            $respostas['q49'][] = $banerjeeSecond->q19; 
+            $respostas['q50'][] = $banerjeeSecond->q20; 
+            $respostas['q50_1'][] = $banerjeeSecond->q20_1; 
+            $respostas['q51'][] = $banerjeeSecond->q21;
+        }
+
+        foreach ($banerjeesThird as $banerjeeThird) {
+            $respostas['q52'][] = $banerjeeThird->q22; 
+            $respostas['q53'][] = $banerjeeThird->q23;
+            $respostas['q54'][] = $banerjeeThird->q24; 
+            $respostas['q55'][] = $banerjeeThird->q25; 
+            $respostas['q56'][] = $banerjeeThird->q26; 
+            $respostas['q56_1'][] = $banerjeeThird->q26_1; 
+            $respostas['q57'][] = $banerjeeThird->q27; 
+            $respostas['q58'][] = $banerjeeThird->q28; 
+            $respostas['q59'][] = $banerjeeThird->q29; 
+            $respostas['q60'][] = $banerjeeThird->q30;
+            $respostas['q61'][] = $banerjeeThird->q31;
+        }
+
+        foreach ($pis as $pi) {
+            $respostas['q62'][] = $pi->q1; 
+            $respostas['q63'][] = $pi->q2;
+            $respostas['q64'][] = $pi->q3; 
+            $respostas['q65'][] = $pi->q4; 
+            $respostas['q66'][] = $pi->q5; 
+            $respostas['q67'][] = $pi->q6; 
+            $respostas['q68'][] = $pi->q7; 
+            $respostas['q69'][] = $pi->q8; 
+            $respostas['q70'][] = $pi->q9; 
+            $respostas['q71'][] = $pi->q10;
+            $respostas['q71_1'][] = $pi->q10_1;
+        }
+
+        foreach ($pis as $piSecond) {
+            $respostas['q72'][] = $piSecond->q11; 
+            $respostas['q73'][] = $piSecond->q12;
+            $respostas['q74'][] = $piSecond->q13; 
+            $respostas['q75'][] = $piSecond->q14; 
+            $respostas['q76'][] = $piSecond->q15; 
+            $respostas['q77'][] = $piSecond->q16; 
+            $respostas['q78'][] = $piSecond->q17; 
+            $respostas['q78_1'][] = $piSecond->q17_1; 
+            $respostas['q79'][] = $piSecond->q18; 
+            $respostas['q80'][] = $piSecond->q19;
+            $respostas['q81'][] = $piSecond->q20;
+            $respostas['q82'][] = $piSecond->q21;
+            $respostas['q82_1'][] = $piSecond->q21_1;
+        }
+
+        foreach ($pis as $piThird) {
+            $respostas['q83'][] = $piThird->q22; 
+            $respostas['q84'][] = $piThird->q23;
+            $respostas['q85'][] = $piThird->q24; 
+            $respostas['q86'][] = $piThird->q25; 
+            $respostas['q87'][] = $piThird->q26; 
+            $respostas['q88'][] = $piThird->q27; 
+            $respostas['q89'][] = $piThird->q28; 
+            $respostas['q90'][] = $piThird->q29; 
+            $respostas['q91'][] = $piThird->q30;
+        }
         
         foreach ($respostas as $key => $resposta){
             $aux = array_filter($resposta);
@@ -56,10 +172,12 @@ class InvoicesController extends Controller
                 $data[$i]['data'] = [$val];
                 $i++;
             }
-            $graficos[$key]['series'] = $data; 
+            $graficos[$key]['series'] = $data;
+            $graficos[$key]['titulo'] = $key; 
         }
 
-        $graficos['q1']['titulo'] = 'Como você avalia o seu conhecimento sobre a Estratégia do Oceano Azul (EOA)?';
+
+        /*$graficos['q1']['titulo'] = 'Como você avalia o seu conhecimento sobre a Estratégia do Oceano Azul (EOA)?';
         $graficos['q2']['titulo'] = 'Você teve acesso a algum material sobre a Estratégia do Oceano Azul?';
         $graficos['q2_1']['titulo'] = 'Com base no que você teve acesso, você acredita ser possível a implementação da Estratégia do Oceano Azul em uma instituição (empresa pública ou privada, e ICT) apenas com o estudo do livro?';
         $graficos['q3']['titulo'] = 'O que a Estratégia do Oceano Azul pode gerar em uma companhia? Escolher quantas opções julgar necessárias.';
@@ -81,6 +199,25 @@ class InvoicesController extends Controller
         $graficos['q16']['titulo'] = 'Você considera válida a aplicação da Estratégia do Oceano azul em esferas públicas?'; 
         $graficos['q17']['titulo'] = 'Conhece alguma aplicação da Estratégia do Oceano Azul na área da saúde?'; 
         $graficos['q18']['titulo'] = 'Você concorda com a seguinte afirmação: criar um oceano azul na área da saúde está mais relacionado com o que o paciente não precisa do que com o que ele precisa. Reduzir gastos e elevar a entrega de serviços é fundamental.';
+        $graficos['q19']['titulo'] = 'Processos de registros burocráticos e repetitivos geram gastos de tempo para o paciente e podem ser reduzidos.'; 
+        $graficos['q20']['titulo'] = 'q20';
+        $graficos['q21']['titulo'] = 'q21';
+        $graficos['q22']['titulo'] = 'q22'; 
+        $graficos['q23']['titulo'] = 'q23';
+        $graficos['q24']['titulo'] = 'q24'; 
+        $graficos['q25']['titulo'] = 'q25';
+        $graficos['q26']['titulo'] = 'q26';
+        $graficos['q27']['titulo'] = 'q27'; 
+        $graficos['q28']['titulo'] = 'q28';
+        $graficos['q29']['titulo'] = 'q29';
+        $graficos['q30']['titulo'] = 'q30';
+        $graficos['q31']['titulo'] = 'q31';
+        $graficos['q32']['titulo'] = 'q32';        
+        $graficos['q33']['titulo'] = 'q33';
+        $graficos['q42']['titulo'] =*/  
+
+
+
 
         $titulos =[];
         foreach ($graficos as $key => $grafico){

@@ -75,7 +75,8 @@ class SecurityPlugin extends Plugin
 			//Guests area resources
 			$guestsResources = array(
 				'guests'     => array('begin_forms','terms', 'eoa_first', 'eoa_second', 'eoaSendSecond', 'eoa_third', 'eoaSendThird',
-				'banerjee', 'banerjeeSend','banerjee_second', 'banerjeeSendSecond','banerjee_third', 'banerjeeSendThird','pi', 'piSend','pi_second', 'piSendSecond','pi_third', 'piSendThird')
+				'banerjee', 'banerjeeSend','banerjee_second', 'banerjeeSendSecond','banerjee_third', 'banerjeeSendThird','pi', 'piSend',
+				'pi_second', 'piSendSecond','pi_third', 'piSendThird', 'sugestion', 'sugestionSend')
 			);
 			foreach ($guestsResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);
