@@ -106,6 +106,10 @@
                             {{ form.render('alt6q5') }}
                             {{ form.label('alt6q5', ['class': 'control-label']) }}
                             </div>
+                            <div class="controls">
+                            {{ form.render('alt7q5') }}
+                            {{ form.label('alt7q5', ['class': 'control-label']) }}
+                            </div>
                 </div>
                 <div class="form-group">
                     <h4>36. O que você entende por randomizar?</h4>

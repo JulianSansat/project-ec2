@@ -64,6 +64,8 @@ class BanerjeeForm extends Form
         $alt5q5->setLabel('Análise de custo-benefício, custo-eficácia e custo-comparação.');
         $alt6q5 = new Check('alt6q5', ['name' => 'aq5[]', 'value' => "Objetivos, resultados e medidas."]);
         $alt6q5->setLabel('Objetivos, resultados e medidas.');
+        $alt7q5 = new Check('alt7q5', ['name' => 'aq5[]', 'value' => "Nenhum deles."]);
+        $alt7q5->setLabel('Nenhum deles.');
 
         $this->add($alt1q5);
         $this->add($alt2q5);
@@ -71,6 +73,7 @@ class BanerjeeForm extends Form
         $this->add($alt4q5);
         $this->add($alt5q5);
         $this->add($alt6q5);
+        $this->add($alt7q5);
 
         $alt1q6 = new Text('q6');
         $alt1q6->setFilters(array('striptags', 'string'));

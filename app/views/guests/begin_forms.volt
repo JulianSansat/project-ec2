@@ -182,7 +182,11 @@
                             <div class="controls">
                             {{ form.render('alt8q8') }}
                             {{ form.label('alt8q8', ['class': 'control-label']) }}
-                            </div>                       
+                            </div>
+                            <div class="controls">
+                            {{ form.render('alt9q8') }}
+                            {{ form.label('alt9q8', ['class': 'control-label']) }}
+                            </div>                         
                         </div>
 
                         <div class="form-group">
@@ -229,6 +233,10 @@
                             {{ form.render('alt6q10') }}
                             {{ form.label('alt6q10', ['class': 'control-label']) }}
                             </div>
+                            <div class="controls">
+                            {{ form.render('alt7q10') }}
+                            {{ form.label('alt7q10', ['class': 'control-label']) }}
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -250,6 +258,10 @@
                             <div class="controls">
                             {{ form.render('alt3q11') }}
                             {{ form.label('alt3q11', ['class': 'control-label']) }}
+                            </div>
+                            <div class="controls">
+                            {{ form.render('alt4q11') }}
+                            {{ form.label('alt4q11', ['class': 'control-label']) }}
                             </div>
                         </div>
 
@@ -290,6 +302,10 @@
                             <div class="controls">
                             {{ form.render('alt5q13') }}
                             {{ form.label('alt5q13', ['class': 'control-label']) }}
+                            </div>
+                            <div class="controls">
+                            {{ form.render('alt6q13') }}
+                            {{ form.label('alt6q13', ['class': 'control-label']) }}
                             </div>
                         </div>
 
@@ -417,6 +433,10 @@
             $("#alt1q11_1").prop('checked', false);
         });
         $("#alt3q11").on("click", function() {
+            $(".q11_1").hide();
+            $("#alt1q11_1").prop('checked', false);
+        });
+        $("#alt4q11").on("click", function() {
             $(".q11_1").hide();
             $("#alt1q11_1").prop('checked', false);
         });

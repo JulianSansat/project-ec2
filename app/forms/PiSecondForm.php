@@ -103,6 +103,8 @@ class PiSecondForm extends Form
         $alt6q17->setLabel('Outro');
         $alt7q17 = new Check("alt7q17", ['name' => 'aq17[]', 'value' => 'Não sei']);
         $alt7q17->setLabel('Não sei');
+        $alt8q17 = new Check("alt8q17", ['name' => 'aq17[]', 'value' => 'Nenhum deles']);
+        $alt8q17->setLabel('Nenhum deles');
 
         $alt1q17_1 = new Text('q17_1');
         $alt1q17_1->setLabel('Qual?');
@@ -115,6 +117,7 @@ class PiSecondForm extends Form
         $this->add($alt5q17);
         $this->add($alt6q17);
         $this->add($alt7q17);
+        $this->add($alt8q17);
         $this->add($alt1q17_1);
 
         $alt1q18 = new \Phalcon\Forms\Element\Radio("alt1q18", ['name' => 'q18', 'value' => 'Sim']);

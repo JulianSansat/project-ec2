@@ -155,6 +155,10 @@
                             {{ form.render('alt7q17') }}
                             {{ form.label('alt7q17', ['class': 'control-label']) }}
                         </div>
+                        <div class="controls">
+                            {{ form.render('alt8q17') }}
+                            {{ form.label('alt8q17', ['class': 'control-label']) }}
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -242,6 +246,10 @@
             $(".q17_1").show();
         });
         $("#alt7q17").on("click", function() {
+            $(".q17_1").hide();
+            $("#alt6q17_1").prop('checked', false);
+        });
+        $("#alt8q17").on("click", function() {
             $(".q17_1").hide();
             $("#alt6q17_1").prop('checked', false);
         });
