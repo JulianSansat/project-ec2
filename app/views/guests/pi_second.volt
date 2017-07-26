@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="form-group">
-                    <h4>77. Os processos de regulamentação para o uso de medicamentos genéricos no mercado podem ser acelerados visando o acesso a recursos básicos de saúde.</h4>
+                    <h4>77. Os processos de regulamentação para o uso de medicamentos genéricos no mercado podem ser acelerados visando ao acesso a recursos básicos de saúde.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q16') }}

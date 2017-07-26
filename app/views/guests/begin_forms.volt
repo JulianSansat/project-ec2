@@ -208,7 +208,7 @@
                         </div>
 
                         <div class="form-group">
-                            <h4>10. Das ferramentas apresentadas a seguir (conforme denominação original de Kim e Mauborgne, 2005), quais delas são/foram empregadas na sua empresa visando o desenvolvimento e aplicação da Estratégia do Oceano Azul? (Leia todas antes de assinalar)  </h4>
+                            <h4>10. Das ferramentas apresentadas a seguir (conforme denominação original de Kim e Mauborgne, 2005), quais delas são/foram empregadas na sua empresa visando ao desenvolvimento e aplicação da Estratégia do Oceano Azul? (Leia todas antes de assinalar)  </h4>
                             <div class="controls">
                             {{ form.render('alt1q10') }}
                             {{ form.label('alt1q10', ['class': 'control-label']) }}

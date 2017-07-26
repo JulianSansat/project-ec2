@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>As políticas públicas focadas no combate à tuberculose terão melhores resultados se:</h4>
+                    <h4>As políticas públicas centradas no combate à tuberculose terão melhores resultados se:</h4>
                 </div>
                 <div class="form-group">
                     <h4>57. Elaboradas com base em evidências científicas sobre seu impacto.</h4>

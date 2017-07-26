@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <h4>85. O uso de mecanismos como Licenças Compulsórias para uso de medicamentos patenteados deve ser mais intensificado visando o acesso aos cuidados de saúde básica.</h4>
+                    <h4>85. O uso de mecanismos como Licenças Compulsórias para uso de medicamentos patenteados deve ser mais intensificado visando ao acesso aos cuidados de saúde básica.</h4>
                         
                     <div class="controls">
                         {{ form.render('alt1q24') }}
